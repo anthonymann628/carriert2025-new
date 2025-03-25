@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.front" />
+
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- device id -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- for wifi signal strength -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" /> <!-- Allows an application to access fine (e.g., GPS) location -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Allows an application to access coarse (e.g., Cell-ID, WiFi) location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <!--
+         Allows using PowerManager WakeLocks to keep processor from sleeping
+		or screen from dimming
+    -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <application
+        android:name=".activities.CTApp"
+        android:fullBackupContent="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/cts_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:testOnly="false"
+        android:theme="@style/Theme.AppCompat"
+        android:usesCleartextTraffic="true">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+        <meta-data
+            android:name="com.here.sdk.access_key_id"
+            android:value="kgcsbmcUCx083Ap3LeoJ7g" />
+        <meta-data
+            android:name="com.here.sdk.access_key_secret"
+            android:value="-ldYTu0xzXtWMDsvucQA2LrNc8VR2KIWCPwo0QmmWcvGn3Z-unefX9DsgccNLN9LpEuoaYqWnk3u-SjwhmkTyA" /> <!-- Disable the Auto-InitProvider of the HERE SDK until the InitProvider is removed with release 4.15.0. -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".activities.StartActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.HomeActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activities.LoginContainer"
+            android:configChanges="locale"
+            android:exported="true"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activities.CameraActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activities.ChangeSettingsContainer"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activities.DeviceStatusContainer"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activities.LogFileViewer"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activities.ManualSyncContainer"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activities.PictureConfirmActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activities.RouteDetailsActivity"
+            android:configChanges="locale|orientation|screenSize"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name=".activities.ScanListActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activities.RouteSelectActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activities.ToolsActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".activities.EmbeddedNavigationActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".barcodereader.BarcodeCaptureActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            tools:ignore="LockedOrientationActivity" />
+
+        <service
+            android:name=".services.DownloadService"
+            android:enabled="true"
+            android:exported="false"
+            android:process="com.agilegeodata.carriertrack">
+            <intent-filter>
+                <action android:name="com.agilegeodata.carriertrack.android.services.DownloadService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".services.UploadService"
+            android:exported="false"
+            android:process="com.agilegeodata.carriertrack">
+            <intent-filter>
+                <action android:name="com.agilegeodata.carriertrack.android.services.UploadService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".services.LocationUpdateService"
+            android:exported="false"
+            android:process="com.agilegeodata.carriertrack">
+            <intent-filter>
+                <action android:name="com.agilegeodata.carriertrack.android.services.LocationUpdateService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".services.CleanupIntentService"
+            android:exported="false"
+            android:process="com.agilegeodata.carriertrack.android.services.CleanupIntentService">
+            <intent-filter>
+                <action android:name="com.agilegeodata.carriertrack.android.services.CleanupIntentService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

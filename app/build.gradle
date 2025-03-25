@@ -1,0 +1,112 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
+
+android {
+    buildFeatures {
+        viewBinding true
+        aidl true
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    signingConfigs {
+        release {
+            keyPassword 'ctt#ct!APP'
+            storeFile file('D:\\Tim\\_ANDROID_PROJECTS\\CarrierTrackNew\\agile_keystore\\ctt_ct_app_2.keystore')
+            storePassword 'ctt#ct!2020'
+            keyAlias 'cttctapp'
+        }
+    }
+    compileSdk 35
+
+    tasks.withType(JavaCompile).configureEach {
+        options.compilerArgs += ['-Xlint:deprecation']
+    }
+
+
+    buildToolsVersion = '34.0.0'
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        minSdk 23
+        targetSdk 35
+        versionCode 7053
+        versionName '7.053'
+
+        android.buildFeatures.buildConfig true
+        buildConfigField "java.util.Date", "buildTime", "new java.util.Date(" + System.currentTimeMillis() + "L)"
+
+        vectorDrawables.useSupportLibrary = true
+        resourceConfigurations += ['en', 'es']
+    }
+
+    buildTypes {
+        release {
+            debuggable = false
+            signingConfig signingConfigs.release
+
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            //proguardFile 'C:/Users/Tim/_ANDROID_PROJECTS/CarrierTrack/app/proguard-project.txt'
+        }
+        debug {
+            debuggable = true
+            ext.alwaysUpdateBuildId = false
+        }
+    }
+
+    flavorDimensions += "version"
+    productFlavors {
+        //ADD A NEW FLAVOR FOR EACH NEW GOOGLE PLAY MANAGED/PRIVATE CLIENTELE
+        prod {
+            applicationId "com.ans.ctt.mobile"
+            applicationIdSuffix ""
+        }
+    }
+
+    dependencies {
+        implementation 'com.google.firebase:firebase-core:21.1.1'
+
+        implementation 'com.google.android.gms:play-services-maps:19.0.0'
+        implementation 'com.google.android.gms:play-services-location:21.3.0'
+//        implementation 'org.apache.httpcomponents:httpclient-android:4.3.5.1'
+        implementation 'cz.msebera.android:httpclient:4.5.8'
+
+        implementation(group: 'org.slf4j', name: 'slf4j-api', version: '2.0.12')
+        implementation(group: 'com.github.tony19', name: 'logback-android', version: '3.0.0')
+
+        implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+
+        // Import the Firebase BoM
+        implementation platform('com.google.firebase:firebase-bom:33.1.2')
+        // Recommended: Add the Google Analytics SDK.
+        implementation 'com.google.firebase:firebase-analytics'
+
+//        implementation "androidx.fragment:fragment:1.7.1"
+        implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+        implementation 'androidx.appcompat:appcompat:1.7.0'
+        implementation 'com.google.android.material:material:1.12.0'
+
+        ///////////////// HERE TECH SDK ////////////////////////////
+        implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'], exclude: ['*mock*.jar'])
+
+        //for barcode/QR code
+        // Important - the CameraSource implementation in this project requires version 8.1 or higher.
+        implementation 'com.google.android.gms:play-services-vision:20.1.3'
+
+        // SIGNATURE CAPTURE
+        implementation 'com.github.gcacace:signature-pad:1.3.1'
+    }
+
+    lint {
+        abortOnError false
+    }
+
+    namespace 'com.agilegeodata.carriertrack.android'
+}

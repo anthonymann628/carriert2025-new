@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topNavRL"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/route_details_background">
+
+    <TextView
+        android:id="@+id/topNavTitle"
+        style="@style/VerySmallWhiteText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/topblue"
+        android:gravity="center"
+        android:text="@string/app_legal_name" />
+
+    <LinearLayout
+        android:id="@+id/routeDetailsTitleLL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topNavTitle"
+        android:layout_marginBottom="1dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/routeDetailsTitle"
+            style="@style/LargeBoldDarkGreyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10.0dip"
+            android:includeFontPadding="false"
+            android:text="@string/deliveryTitle"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:id="@+id/compass_heading"
+            style="@style/LargeBoldDarkGreyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=" "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <LinearLayout
+            android:id="@+id/statusTopRight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/gpsRadioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:layoutDirection="rtl"
+                android:text="GPS"
+                android:textAlignment="textStart"
+                android:textColor="@color/darkgrey"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:buttonTint="@color/darkgrey" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnLeaveRoute"
+            style="@style/SmallWhiteText"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="1dip"
+            android:background="@android:color/transparent"
+            android:src="@drawable/leave_button_states" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/routeDetailsStatisticsContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topNavTitle"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#E6000000"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/routeDetailsAddress"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/deliveryAddresses" />
+
+                    <TextView
+                        android:id="@+id/routeDetailsPH1"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/routeDetailsPhotos"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:text="@string/deliveryPhotos" />
+
+                    <TextView
+                        android:id="@+id/routeDetailsPH2"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/routeDetailsTotal"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/deliveryTotal" />
+
+                    <TextView
+                        android:id="@+id/routeDetailsTotalVal"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/shape_dk_gr_box"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/routeDetailsPhotosRequested"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/deliveryRequested" />
+
+                    <TextView
+                        android:id="@+id/routeDetailsPhotosRequestedVal"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/shape_dk_gr_box"
+                        android:gravity="center" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/routeDetailsRemaining"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/deliveryRemaining" />
+
+                    <TextView
+                        android:id="@+id/routeDetailsRemainingVal"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/shape_dk_gr_box"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/routeDetailsPhotosTaken"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/deliveryTaken" />
+
+                    <TextView
+                        android:id="@+id/routeDetailsPhotosTakenVal"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/shape_dk_gr_box"
+                        android:gravity="center" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/routeDetailsCompleted"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/deliveriesResolved" />
+
+                    <TextView
+                        android:id="@+id/routeDetailsCompletedVal"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/shape_dk_gr_box"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/routeDetailsPhotosUploaded"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/deliveryUploaded" />
+
+                    <TextView
+                        android:id="@+id/routeDetailsPhotosUploadedVal"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/shape_dk_gr_box"
+                        android:gravity="center" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/routeDetailsUploaded"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/deliveryUploaded" />
+
+                    <TextView
+                        android:id="@+id/routeDetailsUploadedVal"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/shape_dk_gr_box"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/routeDetailsPH3"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="2dp" />
+
+                    <TextView
+                        android:id="@+id/routeDetailsPH4"
+                        style="@style/MediumWhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp" />
+                </TableRow>
+            </TableLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/aSV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/routeDetailsTitleLL">
+
+        <LinearLayout
+            android:id="@+id/svLL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/routeDetailsJobInfoLL"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="2.0dip"
+                android:orientation="horizontal"
+                android:stretchColumns="0">
+
+                <TableRow>
+
+                    <RelativeLayout
+                        android:id="@+id/routeDetailsInfo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="39dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5.0dip"
+                        android:background="@drawable/shape_gradient_grey_four_corners">
+
+                        <TableLayout
+                            android:id="@id/routeDetailsJobInfoLL"
+                            android:layout_width="fill_parent"
+                            android:layout_height="39dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="2.0dip"
+                            android:orientation="horizontal"
+                            android:paddingTop="4.0dip"
+                            android:stretchColumns="4">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/routeDetailsJobId"
+                                    style="@style/MediumSmallBoldWhiteText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/deliveryJob"
+                                    android:textSize="12.0sp" />
+
+                                <TextView
+                                    android:id="@+id/routeDetailsJobIdVal"
+                                    style="@style/MediumSmallBoldWhiteText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="23dp"
+                                    android:layout_marginStart="10.0dip"
+                                    android:background="@drawable/shape_gradient_darkgrey_box"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="2.0dip"
+                                    android:paddingRight="2.0dip"
+                                    android:textSize="12.0sp" />
+
+                                <TextView
+                                    android:id="@+id/routeDetailsRouteId"
+                                    style="@style/MediumSmallBoldWhiteText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10.0dip"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/deliveryRoute"
+                                    android:textSize="12.0sp" />
+
+                                <TextView
+                                    android:id="@+id/routeDetailsRouteIdVal"
+                                    style="@style/MediumSmallBoldWhiteText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="23dp"
+                                    android:layout_marginStart="10.0dip"
+                                    android:background="@drawable/shape_gradient_darkgrey_box"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="2.0dip"
+                                    android:paddingRight="2.0dip"
+                                    android:textSize="12.0sp" />
+                            </TableRow>
+                        </TableLayout>
+
+                        <ImageView
+                            android:id="@+id/routeDetailsActivity"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentEnd="false"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="8dp"
+                            android:layout_toStartOf="@id/routeDetailsPlusMinus"
+                            android:src="@drawable/activitybutton" />
+
+                        <ImageView
+                            android:id="@+id/routeDetailsPlusMinus"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="end|center"
+                            android:src="@drawable/blueplus" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/btnRouteDetailsSearchEnabled"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_marginRight="5.0dip"
+                        android:background="@drawable/searching_enable" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/routeDetailsSearchBox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:stretchColumns="0"
+                android:visibility="gone">
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@id/searchVal"
+                        style="@style/red_edit_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="12.0dip"
+                        android:layout_marginTop="2.0dip"
+                        android:inputType="text"
+                        android:textSize="14.0sp" />
+
+                    <ImageButton
+                        android:id="@+id/btnRouteDetailsSearchForAddress"
+                        android:layout_width="40.0dip"
+                        android:layout_height="40.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="25.0dip"
+                        android:layout_marginRight="25.0dip"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/pop_search" />
+
+                    <ImageButton
+                        android:id="@+id/btnRouteDetailsSearchClearForAddress"
+                        android:layout_width="40.0dip"
+                        android:layout_height="40.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="15.0dip"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/pop_exit" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

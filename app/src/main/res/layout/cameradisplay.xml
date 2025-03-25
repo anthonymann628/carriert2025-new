@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/camera_preview"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SurfaceView
+            android:id="@+id/camera_surface_previewa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true" />
+        <!--
+                    android:layout_toLeftOf="@+id/overlay_camera"/>
+        -->
+
+        <LinearLayout
+            android:id="@+id/overlay_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/takepicture"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/shutter_button" />
+
+            <ImageButton
+                android:id="@+id/cancelButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/shutter_exit" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </LinearLayout>
+    -->
+
+    <!--
+        <TextView
+            android:id="@+id/notesAddress"
+            style="@style/MediumWhiteText"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal|bottom" />
+    -->
+
+</FrameLayout>

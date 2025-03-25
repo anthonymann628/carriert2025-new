@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/batchHeader"
+        style="@style/SmallWhiteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/numAddressHeader"
+        style="@style/SmallWhiteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/numPhotosUploadedHeader"
+        style="@style/SmallWhiteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/numBreadCrumbHeader"
+        style="@style/SmallWhiteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/gpsLocationOfUploadHeader"
+        style="@style/SmallWhiteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp" />
+</TableRow>

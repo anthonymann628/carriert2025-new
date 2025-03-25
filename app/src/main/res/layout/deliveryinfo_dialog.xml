@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/layout_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="5dp" />
+
+        <TextView
+            android:id="@+id/headerTitle"
+            style="@style/LargeWhiteText"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/LargeWhiteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="25dp"
+        android:paddingTop="20dp"
+        android:text="@string/radio_None" />
+
+    <RadioGroup
+        android:id="@+id/radiodelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent">
+
+        <!--
+                <RadioButton
+                    android:id="@+id/radioVacant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-20dp"
+                    android:paddingLeft="75dp"
+                    android:button="@drawable/deliveryinfo_radio"
+                    android:textSize="18dp"
+                    android:text="@string/radio_vacanthome"/>
+        -->
+
+        <RadioButton
+            android:id="@+id/radioNotpickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-20dp"
+            android:button="@drawable/deliveryinfo_radio"
+            android:paddingLeft="75dp"
+            android:text="@string/radio_notpickup"
+            android:textSize="18dp" />
+
+        <RadioButton
+            android:id="@+id/radioPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-20dp"
+            android:button="@drawable/deliveryinfo_radio"
+            android:paddingLeft="75dp"
+            android:text="@string/radio_place"
+            android:textSize="18dp" />
+
+        <LinearLayout
+            android:id="@+id/widget113"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <Spinner
+                android:id="@+id/myautocomplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:dropDownHorizontalOffset="200dp"
+                android:dropDownVerticalOffset="-150dp" />
+
+            <EditText
+                android:id="@+id/otherPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/deliveryDropOffListEnterOther"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <!--
+                <RadioButton
+                    android:id="@+id/radiostop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-20dp"
+                    android:paddingLeft="75dp"
+                    android:textSize="18dp"
+                    android:button="@drawable/deliveryinfo_radio"
+                    android:text="@string/radio_stop" />
+        -->
+    </RadioGroup>
+</LinearLayout>

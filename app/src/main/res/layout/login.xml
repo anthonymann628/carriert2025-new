@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/defStyle"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+        <!--
+                android:layout_above="@+id/bottombar"
+        -->
+
+        <LinearLayout
+            android:id="@+id/brandingContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingTop="20dp"
+            android:paddingBottom="40dp">
+            <!--
+                       android:layout_centerInParent="true"
+            -->
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="140dp"
+                android:layout_height="80dp"
+                android:layout_weight="0.24"
+                android:contentDescription="logo"
+                android:src="@drawable/cts_logo" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.24">
+
+                <TextView
+                    android:id="@+id/carriertrackTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/app_legal_name"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/red"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/loginTitle"
+            style="@style/LargeBoldBlackText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#03A9F4"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/loginTitle"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            style="@style/MediumBlackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:paddingBottom="20dp"
+            android:text="@string/loginDesc" />
+
+        <TextView
+            android:id="@+id/loginError"
+            style="@style/MediumRedText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="@string/loginErrorInvalidPassword"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/loginPasswordET"
+            style="@style/red_edit_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:inputType="textPassword"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/MediumWhiteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/blue_button_pressed"
+            android:text="@string/submit" />
+
+    </LinearLayout>
+
+
+    <!-- MOVING THE INITIAL DOWNLOAD CHECK ON APP STARTUP -->
+    <LinearLayout
+        android:id="@+id/downloadOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#807B8A8C"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_blue_four_corners">
+            <!--
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+            -->
+
+            <ImageView
+                android:id="@+id/spinnerView"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/loading" />
+
+            <TextView
+                android:id="@+id/statusMessage"
+                style="@style/MediumBoldWhiteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/startDownloading" />
+            <!--
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toRightOf="@id/spinnerView"
+            -->
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

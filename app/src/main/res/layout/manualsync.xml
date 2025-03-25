@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/defStyle"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/SVBody"
+        style="@style/defStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            style="@style/defStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/topnav"
+                layout="@layout/inc_topnav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <RelativeLayout
+                android:id="@+id/homeScreenDeliverVerifyContainer"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_blue_four_corners">
+
+                <ImageView
+                    android:id="@+id/row1IV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/upload" />
+
+                <TextView
+                    android:id="@+id/row1TV"
+                    style="@style/LargeBoldWhiteText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/row1IV"
+                    android:text="@string/manualSyncUploadData" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/row2RL"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_blue_four_corners">
+
+                <ImageView
+                    android:id="@+id/row2IV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/download" />
+
+                <TextView
+                    android:id="@+id/row2TV"
+                    style="@style/LargeBoldWhiteText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/row2IV"
+                    android:text="@string/manualSyncDownloadData" />
+            </RelativeLayout>
+
+            <!--
+                        <RelativeLayout
+                            android:id="@+id/row3RL"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/shape_blue_four_corners" >
+
+                            <ImageView
+                                android:id="@+id/row3IV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/download" />
+
+                            <TextView
+                                android:id="@+id/row3TV"
+                                style="@style/LargeBoldWhiteText"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/row3IV"
+                                android:text="@string/manualSyncUpgradeStatus" />
+                        </RelativeLayout>
+            -->
+
+            <RelativeLayout
+                android:id="@+id/statusSpinnerRL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_blue_four_corners"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/spinnerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:src="@drawable/loading" />
+
+                <TextView
+                    android:id="@+id/statusMessage"
+                    style="@style/MediumBoldWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@id/spinnerView"
+                    android:text="" />
+            </RelativeLayout>
+
+            <include
+                layout="@layout/last_time_stamp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/homeViewLastUpdated"
+                android:text="@string/homeTesting" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/bottombar"
+        layout="@layout/bottom_cts_logo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

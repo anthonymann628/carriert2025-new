@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/topnav"
+        layout="@layout/inc_topnav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <ScrollView
+        android:id="@+id/SVBody"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottombar"
+        android:layout_below="@id/topnav"
+        android:fillViewport="true">
+
+        <LinearLayout
+            style="@style/defStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/homeScreenDeliverVerifyContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_states">
+
+                <TextView
+                    android:id="@+id/row1TV"
+                    style="@style/MediumBoldWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deviceStatusGPSStatus" />
+
+                <TextView
+                    android:id="@+id/deviceStatusGPSStatusVal"
+                    style="@style/MediumBoldWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/row1TV"
+                    android:text="@string/notAvailable" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/row2RL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_states">
+
+                <TextView
+                    android:id="@+id/row2TV"
+                    style="@style/MediumBoldWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deviceStatusRadioStatus" />
+
+                <TextView
+                    android:id="@+id/deviceStatusRadioStatusVal"
+                    style="@style/MediumBoldWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/row2TV"
+                    android:text="@string/notAvailable" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/row3RL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_states">
+
+                <TextView
+                    android:id="@+id/row3TV"
+                    style="@style/MediumBoldWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deviceStatusAvailMemory" />
+
+                <TextView
+                    android:id="@+id/deviceStatusAvailMemoryVal"
+                    style="@style/MediumBoldWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/row3TV"
+                    android:text="@string/notAvailable" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/row4RL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_states">
+
+                <TextView
+                    android:id="@+id/row4TV"
+                    style="@style/MediumBoldWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deviceStatusAvailSDSpace" />
+
+                <TextView
+                    android:id="@+id/deviceStatusAvailSDSpaceVal"
+                    style="@style/MediumBoldWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/row4TV"
+                    android:text="@string/notAvailable" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rowDSRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_states">
+
+                <TextView
+                    android:id="@+id/rowDSTV"
+                    style="@style/MediumBoldWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dataStatus" />
+
+                <TextView
+                    android:id="@+id/deviceStatusAvailDSSpaceVal"
+                    style="@style/MediumBoldWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rowDSTV"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/notAvailable" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rowVersionDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_states">
+
+                <TextView
+                    android:id="@+id/homeAppVersionTV"
+                    style="@style/MediumBoldWhiteText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rowTempRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnDelete"
+                    style="@style/MediumWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/green_button_pressed"
+                    android:text="@string/deleteLog" />
+
+                <Button
+                    android:id="@+id/btnCleanFiles"
+                    style="@style/MediumWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/green_button_pressed"
+                    android:text="@string/cleanFiles" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rowTempRLa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <ToggleButton
+                    android:id="@+id/btnSimulation"
+                    style="@style/MediumWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/green_button_pressed"
+                    android:textOff="Simulation Off"
+                    android:textOn="Simulation On" />
+
+                <Button
+                    android:id="@+id/btnUploadDb"
+                    style="@style/MediumWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/green_button_pressed"
+                    android:text="@string/uploadDbtext" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/row5RL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_states">
+
+                <TextView
+                    android:id="@+id/row5TV"
+                    style="@style/MediumBoldWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deviceStatusDataReport" />
+
+                <TableLayout
+                    android:id="@+id/row5TL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/row5TV"
+                    android:stretchColumns="4"></TableLayout>
+            </RelativeLayout>
+
+            <ToggleButton
+                android:id="@+id/btnTestData"
+                style="@style/MediumWhiteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0"
+                android:background="@drawable/green_button_pressed"
+                android:textOff="Test Data Off"
+                android:textOn="Test Data On" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/bottombar"
+        layout="@layout/bottom_cts_logo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

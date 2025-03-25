@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="consent_state_title" translatable="false">Consent preferences</string>
+
+    <string name="consent_state_text" translatable="false">The Location Engine contains functionality that can gather certain information about the surroundings of the mobile device in order to improve the HERE services used by the HERE SDK. An example of such information is the strength of the nearby Wi-Fi and mobile network signals.</string>
+
+    <string name="consent_state_change_answer" translatable="false">Manage consent</string>
+
+    <string name="consent_state_granted" translatable="false">You have granted consent to the data collection.</string>
+
+    <string name="consent_state_denied" translatable="false">You have denied consent to the data collection.</string>
+
+    <!--
+        <string name="mapbox_access_token" translatable="false">pk.eyJ1IjoidGt2YWxlbnRpbmUiLCJhIjoiY2p2YjJwbm9xMWlvdzQ0bWVmdm1rajQ2cCJ9.QbPJcKEQ6sJ8BJC6OqBD1g</string>
+    -->
+    <string name="mapbox_access_token" translatable="false">pk.eyJ1IjoidGt2YWxlbnRpbmUiLCJhIjoiY2w2MTB1ejhyMWc0bzNrcWhjOXE5ajI3cyJ9.10gbpNfA9aIM60oE8mRblQ</string>
+
+    <string name="app_name">Carrier Track</string>
+    <string name="app_legal_name" translatable="false">CarrierTrack® Technologies, LLC</string>
+    <string name="homeAppVersion">V%s</string> <!-- picked up from androidmanifest -->
+
+    <!-- new -->
+    <string name="errorDescriptionFieldIsRequired">Device description field is required.</string>
+    <string name="notAvailable">Not Available</string>
+
+    <!-- globally used -->
+    <string name="submit">Submit</string>
+    <string name="save">Save</string>
+    <string name="successDialogTitle">Success!</string>
+    <string name="errorDialogTitle">Error!</string>
+    <string name="dialogClose">Close</string>
+    <string name="dialogYes">YES</string>
+    <string name="dialogCancel">Cancel</string>
+    <string name="dialogReconcile">Reconcile</string>
+    <string name="dialogNo">NO</string>
+    <string name="logout">Admin Logout</string>
+    <string name="dialogOk">OK</string>
+    <string name="dataStatus">Data Status</string>
+    <string name="gpsStatus">GPS Status</string>
+    <string name="fail">fail</string>
+    <string name="success">SUCCESS</string>
+    <string name="dialogContinue">Continue</string>
+    <string name="checkingAppUpgradeTitle">Checking...</string>
+    <string name="checkingAppUpgradeMessage">Checking for Upgrade</string>
+    <string name="appUpgrade">Upgrade</string>
+
+    <!-- Data objects -->
+    <string name="dataObjectBoundingPointCoordinates">Coordinates : </string>
+    <string name="dataObjectConnectivityStatusWifi">Wifi</string>
+    <string name="dataObjectConnectivityStatusMobile">Mobile</string>
+    <string name="dataObjectConnectivityStatusNoConnection">No Connection</string>
+
+
+    <!-- Home Screen -->
+    <string name="homeWelcome">Welcome</string>
+    <string name="homeWelcomePlusName">Welcome, %s</string>
+    <string name="homeSelectTask">Please select a task.</string>
+    <string name="homeDeliverVerify">Deliver</string>
+    <string name="homeDeliverSequence">Re-sequence</string>
+    <string name="homeDeviceStatus">Device Status</string>
+    <string name="homeChangeSettings">Change Settings</string>
+    <string name="homeManualSync">Manual Sync</string>
+    <string name="homeLastSuccessfulSync">Last Successful Sync: %s</string>
+    <string name="viewLog">View Log</string>
+    <string name="deleteLog">Delete Log</string>
+    <string name="cleanFiles">Clean Files</string>
+    <string name="uploadDbtext">Upload Logs/DB</string>
+    <string name="copyDb">Copy DB</string>
+    <string name="homeLastConnection">Last Connection:</string>
+
+    <!-- Upgrading app -->
+    <string name="upgradingApp">Upgrading your app, currently version $0, with version $1. It will automatically close. Please click Install on the following screen. If the app, does not restart, please restart manually.</string>
+
+    <!-- Log File Viewer -->
+    <string name="refresh">Refresh</string>
+    <string name="delete">Delete</string>
+    <string name="loadingLogFile">Loading Log File, depending on log file size, this may take some time.</string>
+
+    <!-- Manual Sync -->
+    <string name="manualSyncTitle">Manual Sync</string>
+    <string name="manualSyncPleaseWaitUploadData">Please wait while we upload data.</string>
+    <string name="manualSyncPleaseWaitDownloadData">Please wait while we download data.</string>
+    <string name="manualSyncSuccessUploadData">Your data was successfully uploaded.</string>
+    <string name="manualSyncSuccessDownloadData">Your data was successfully downloaded.</string>
+    <string name="manualSyncUploadData">Upload Data</string>
+    <string name="manualSyncDownloadData">Download Data</string>
+    <string name="manualSyncUpgrade">Upgrade Required</string>
+    <string name="manualSyncUpgradeNotNeeded">No upgrade is required.</string>
+    <string name="manualSyncUpgradeStatus">Check For Upgrade</string>
+    <string name="manualSyncUpgradeErrorText">Check connectivity and try Upgrade again.</string>
+    <string name="manualSyncUploadErrorText">Check connectivity and try Upload again.</string>
+    <string name="manualSyncDownloadErrorText">Check connectivity and try Download again.</string>
+    <string name="manualSyncPleaseWait">Please Wait...</string>
+    <string name="manualSyncCheckingConnection">Checking for connection</string>
+    <string name="manualSyncChecking">Checking...</string>
+    <string name="manualSyncCheckingForUpgrade">Checking for Upgrade</string>
+    <string name="manualSyncLastConnection">Last Connection:</string>
+
+    <!-- Connectivity strings -->
+    <string name="errorDialogNoConnectivityRetryTitle">Please connect and retry Checking for Upgrade</string>
+    <string name="errorDialogNoConnectivityTitle">No Connectivity</string>
+    <string name="errorTextNoServerConnectivity">No Server Connection</string>
+
+    <!-- Google Play services -->
+    <string name="googlePlayServicesMissingService">Google Play SERVICE MISSING</string>
+    <string name="googlePlayServicesUpdateRequired">Google Play UPDATE REQUIRED</string>
+
+    <!-- Device feature access -->
+    <string name="deviceFeatureAccessLocationNotGranted">LOCATION access not granted by user.</string>
+    <string name="deviceFeaturePermissionsRequiredForThisApp">Permissions are required for this app.
+        Tap OK to go to app settings to change Location and Camera permissions.
+        The app will terminate and you must restart the app.
+        Tap Cancel to terminate this app.</string>
+    <string name="deviceFeaturePermissionsGoToAppSettings">You need to give some mandatory permissions to continue. Tap OK to go to settings to change Location and Camera permissions? Tap Cancel to terminate this app.</string>
+    <string name="deviceFeatureAccessGpsNotGrantedTerminateApp">Carrier Track requires GPS access. Please turn on GPS to use Carrier Track.\n\nApp will terminate now.</string>
+    <string name="deviceFeatureAccessMapNotInitialized">MAP not intialized. Using WIFI?</string>
+
+    <!-- Device Status -->
+    <string name="deviceStatusGPSStatus">GPS Status:</string>
+    <string name="deviceStatusRadioStatus">Radio Status: </string>
+    <string name="deviceStatusAvailMemory">Available Memory:</string>
+    <string name="deviceStatusAvailSDSpace">Available SD Space:</string>
+    <string name="deviceStatusDataReport">Data Report:</string>
+    <string name="deviceStatusBatchId">Batch ID</string>
+    <string name="deviceStatusNumAddress"># Address</string>
+    <string name="deviceStatusNumPhotosUploaded"># Photos</string>
+    <string name="deviceStatusNumBreadCrumbs"># Breadcrumbs</string>
+    <string name="deviceStatusAddress">Address:</string>
+    <string name="deviceStatusSDCardSpace">%s GB</string>
+    <string name="deviceStatusAvailMemorySpace">%s MB</string>
+    <string name="deviceStatusTitle">Device Status</string>
+    <string name="deviceStatusDataUsage">Total Data Usage: </string>
+    <string name="deviceStatusNoTraffic">No traffic to report</string>
+    <string name="deviceStatusLastAppUpdate">Last App Update:</string>
+    <string name="deviceStatusUploadingFiles">Uploading db, photo list, and log files</string>
+    <string name="deviceStatusPleaseWait">Please Wait...</string>
+    <string name="deviceStatusCleaningFolder">Cleaning folder</string>
+    <string name="deviceStatusNoSignal">No Signal</string>
+
+    <!-- Change Settings -->
+    <string name="changeSettingsTitle">Change Settings</string>
+    <string name="changeSettingsLanguage">Language:</string>
+    <string name="changeSettingsEnglish">English</string>
+    <string name="changeSettingsSpanish">Spanish</string>
+    <string name="changeSettingsPleaseWait">Please Wait...</string>
+    <string name="changeSettingsCheckingConnection">Checking for connection</string>
+    <string name="provisionDeviceText">Click the button below to register your tablet with our system.</string>
+    <string name="registerTablet">Register Tablet</string>
+    <string name="tabletIdentifier">Tablet Id: %s</string>
+    <string name="enterAdminPassword">Enter Admin Password:</string>
+    <string name="adminModeIsSet">Device is in Admin Mode</string>
+    <string name="tabletRequestSent">Your request for registering the tablet has been sent</string>
+    <string name="tabletRequestSentError">An error occurred and your request was not sent. Please contact technical support.</string>
+    <string name="removeFromAdminMode">Remove From Admin Mode</string>
+    <string name="changeSettingsLogout">Logout?</string>
+    <string name="changeSettingsAreYouSure">Are you sure that you want to logout?</string>
+    <string name="ctChangeSettingsAreYouSure">Are you sure that you want to close CarrierTrack?</string>
+
+    <!-- Route Select Screen -->
+    <string name="routeSelectTitle">Deliver/Verify</string>
+    <string name="routeSequenceTitle">Deliver/Sequence</string>
+    <string name="routeSelectDesc">Please select a Route   to work with</string>
+    <string name="routeSelectSearchByRoute">Search \nBy Route:</string>
+    <string name="routeSelectNumPhotosUploaded"># Photos Uploaded</string>
+    <string name="routeSelectNumAddresses"># Addresses</string>
+    <string name="routeSelectNumDelivered"># Delivered</string>
+    <string name="routeSelectNumPhotos"># Photos</string>
+    <string name="routeSelectDeliveryZoneSelect">Select a Delivery Zone for this Route</string>
+    <string name="routeSelectDownloadingTitle">Downloading...</string>
+    <string name="routeSelectDownloadingMessage">Downloading Route</string>
+    <string name="routeSelectLastStartedNew">Last Started</string>
+    <string name="routeSelectNoRoutes">No Routes were found.</string>
+
+    <!-- Delivery/Reconcile/sequence Screen -->
+    <string name="deliveryTitle">Delivering</string>
+    <string name="sequenceTitle">Sequencing</string>
+    <string name="deliveryJob">Job:</string>
+    <string name="deliveryRoute">Route:</string>
+    <string name="deliveryStatus">Status</string>
+    <string name="deliveryAddress">Address</string>
+    <string name="deliveryActions">Actions</string>
+    <string name="deliveryRemaining">Remaining</string>
+    <string name="deliveryDnd">DND</string>
+    <string name="deliveryCustSvc">CUST SVC</string>
+    <string name="deliveryQty">QTY: %d</string>
+    <string name="deliveryAreYouSure">Are You Sure?</string>
+    <string name="deliveryResetRouteConf">Are you sure you want to leave the route?</string>
+    <string name="areYouFinished">Are you finished?</string>
+    <string name="areYouFinishedDelivering">Are you finished delivering this route?</string>
+    <string name="deliveryAddresses">ADDRESSES</string>
+    <string name="deliveryTotal">Total</string>
+    <string name="deliveryCompleted">Completed</string>
+    <string name="deliveriesResolved" translatable="false">Resolved</string>
+    <string name="deliveryUploaded">Uploaded</string>
+    <string name="deliveryPhotos">PHOTOS</string>
+    <string name="deliveryRequested">Requested</string>
+    <string name="deliveryTaken">Taken</string>
+    <string name="deliveryUnreconciledMessage1">You have </string>
+    <string name="deliveryUnreconciledMessage2"> unreconciled deliveries.</string>
+
+    <!-- Login -->
+    <string name="loginTitle">Login</string>
+    <string name="loginDesc">Enter your password into the field below and click submit.</string>
+    <string name="loginErrorInvalidPassword">Passwords must be at least 6 characters and only contain letters or numbers</string>
+    <string name="loginErrorInvalidPasswordMatch">You have entered an invalid password. Please try again.</string>
+
+    <!-- Tools -->
+    <string name="toolsTitle">Tools</string>
+    <string name="toolsButton">Update GPS Location for %s</string>
+    <string name="toolsButtonNA">GPS Location Not Available</string>
+    <string name="toolsButtonConfirm">Are you sure you want to update the coordinates for this address?</string>
+    <string name="toolsReconciliationUnsuccessful">Reconciliation unsuccessful - no location determined.</string>
+    <string name="toolsEnterOtherText">Enter Other Text</string>
+    <string name="toolsMustHaveValue">must have a value</string>
+
+    <!-- StartActivity -->
+    <string name="startDownloading">Please wait while we download the latest database</string>
+
+    <!-- RouteSelectActivity -->
+
+    <!-- DownloadService -->
+    <string name="downloadServiceNoDeviceId">unknown device id</string>
+
+    <!-- MapBox -->
+    <string name="offline_version_key" translatable="false">offline_preference_key</string>
+    <string name="current_night_mode" translatable="false">current_night_mode</string>
+
+
+    <!-- UploadService -->
+    <string name="uploadServiceAddressNotAvailable">Address not available</string>
+
+
+    <!-- Error Messages -->
+    <string name="errorUnableToCopyFile">Unable to copy file</string>
+    <string name="downloadServiceUnknownError">An unknown error occurred while downloading the database. Please contact customer support.</string>
+    <string name="changeSettingsLanguageSavedError">An error occurred and your language was not saved. Please try again.</string>
+    <string name="errorUnableToDelete">Unable to delete log file: %s</string>
+    <string name="downloadServiceUnableToWrite">We were unable to write the database. Please contact customer service.</string>
+    <string name="downloadServiceErrorCodeNoConnectivity">10002</string>
+    <string name="searchErrorMinChars">Please enter at least 2 character to search</string>
+    <string name="searchErrorUnknown">An unknown error occurred with the search. Please try again.</string>
+    <string name="errorUnableToSavePicture">We were unable to save this picture. Please try again!</string>
+    <string name="notes">Notes (optional):</string>
+
+    <string name="loginPasswordValue">carrierqwp</string>
+    <string name="adminPasswordValue">ctadminbleet</string>
+    <string name="adminPhonePasswordValue">ctadminroastbeef</string>
+    <string name="adminAndUserPhonePasswordValue">ctuseradminoffline</string>
+    <string name="seqTestPasswordValue">ctseqtest</string>
+    <string name="resetServicesPasswordValue">resetservice</string>
+
+    <string name="radio_vacanthome">Vacant Home</string>
+    <string name="radio_notpickup">Papers not being picked up</string>
+    <string name="radio_place">Placement Request</string>
+    <string name="radio_stop">Stop delivery request</string>
+    <string name="radio_None">SELECT DELIVERY UPDATE</string>
+
+    <string name="toolsReconciliationButton">Reconcile Delivery Information for %s</string>
+    <string name="toolsDeliveryButton">Update Delivery Information for %s</string>
+    <string name="toolsScanButton" translatable="false">Scan codes for %s</string>
+    <string name="routedDownloadbtn">Download Route</string>
+    <string name="chooseLocation">Choose Delivery Place</string>
+    <string name="branding">Software</string>
+    <string name="brandingByAgd">By AGD</string>
+    <string name="deliveryDropOffListEnterOther">Enter Other</string>
+    <string name="homeTesting">Testing</string>
+    <string name="pictureConfirmNote">Note</string>
+    <string name="routeDeliveryZoneDefault">Left and Right Front (default)</string>
+    <string name="routeDeliveryZoneLeftFront">Left Front Only</string>
+    <string name="routeDeliveryZoneRight">Right Front Only</string>
+    <string name="useMapsLabel">Use Maps</string>
+    <string name="useMapsYesLabel">Yes</string>
+    <string name="useMapsNoLabel">No</string>
+    <string name="useSpeechLabel">Use Speech</string>
+    <string name="useSpeechYesLabel">Yes</string>
+    <string name="useSpeechNoLabel">No</string>
+    <string name="page_number_text">Page\n0</string>
+    <string name="imagecontentdescription">image</string>
+    <string name="contentdescriptionfloatingbutton">floating button</string>
+
+</resources>

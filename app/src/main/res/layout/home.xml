@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/defStyle"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/topnav"
+        layout="@layout/inc_topnav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/topnav"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/homeScreenDeliverVerifyContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_states"
+                android:clickable="true"
+                android:focusable="true">
+                <!--
+                android:onClick="onClickButton" >
+-->
+
+                <ImageView
+                    android:id="@+id/row1IV"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="deliver icon"
+                    android:src="@drawable/cts_logo" />
+
+                <TextView
+                    android:id="@+id/row1TV"
+                    style="@style/LargeBoldWhiteText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/row1IV"
+                    android:text="@string/homeDeliverVerify" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/homeScreenRenumberContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_states"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="visible">
+                <!--
+                android:onClick="onClickButton"
+-->
+
+                <ImageView
+                    android:id="@+id/renumberImageView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/cts_logo" />
+
+                <TextView
+                    android:id="@+id/renumberTextView"
+                    style="@style/LargeBoldWhiteText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/renumberImageView"
+                    android:text="Re-number" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/homeScreenResequenceContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_states"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="visible">
+                <!--
+                android:onClick="onClickButton"
+-->
+
+                <ImageView
+                    android:id="@+id/row6IV"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/cts_logo" />
+
+                <TextView
+                    android:id="@+id/row6TV"
+                    style="@style/LargeBoldWhiteText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/row6IV"
+                    android:text="@string/homeDeliverSequence" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/row2RL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_states"
+                android:clickable="true"
+                android:focusable="true">
+                <!--
+                android:onClick="onClickButton" >
+-->
+
+                <ImageView
+                    android:id="@+id/row2IV"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/cts_logo" />
+
+                <TextView
+                    android:id="@+id/row2TV"
+                    style="@style/LargeBoldWhiteText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/row2IV"
+                    android:text="@string/homeDeviceStatus" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/row3RL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_states"
+                android:clickable="true"
+                android:focusable="true">
+                <!--
+                                android:onClick="onClickButton" >
+                -->
+
+                <ImageView
+                    android:id="@+id/row3IV"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/cts_logo" />
+
+                <TextView
+                    android:id="@+id/row3TV"
+                    style="@style/LargeBoldWhiteText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/row3IV"
+                    android:text="@string/homeChangeSettings" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/row4RL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_states"
+                android:clickable="true"
+                android:focusable="true">
+                <!--
+                                android:onClick="onClickButton" >
+                -->
+
+                <ImageView
+                    android:id="@+id/row4IV"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/cts_logo" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@id/row4IV"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/row4TV"
+                        style="@style/LargeBoldWhiteText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/homeManualSync" />
+
+                    <TextView
+                        android:id="@+id/rowLastSync"
+                        style="@style/SmallBoldWhiteText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/row5RL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/homeViewAppVersion"
+                    style="@style/SmallBoldBlackText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/homeViewLastUpdated"
+                    style="@style/SmallBoldBlackText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/homeViewAppVersion"
+                    android:gravity="center"
+                    android:visibility="gone" />
+
+                <include
+                    layout="@layout/last_time_stamp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/homeViewLastUpdated"
+                    android:text="@string/homeTesting" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        layout="@layout/bottom_cts_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

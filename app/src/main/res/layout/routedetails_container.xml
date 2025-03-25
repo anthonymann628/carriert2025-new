@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/routeDetailsFragmentContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!--  Left side fragment is installed in RouteDetailsActivity -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerViewLeftSide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--  right side fragment is installed in RouteDetailsActivity	-->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerViewRightSide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/routeDetailsFragmentContainer2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="@color/red" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerViewNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</LinearLayout>

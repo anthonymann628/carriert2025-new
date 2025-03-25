@@ -1,0 +1,10 @@
+<resources>
+    <string-array name="deliveryoption">
+        <item>Seleccionar Ubicación</item>
+        <item>Acera</item>
+        <item>Garage</item>
+        <item>porche</item>
+        <item>Skyhook</item>
+        <item>otro</item>
+    </string-array>
+</resources>

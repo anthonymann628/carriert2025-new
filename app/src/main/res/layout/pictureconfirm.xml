@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activityRoot"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:id="@+id/pictureContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imagePreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/threeButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="false"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/rejectButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/shutter_trashcan" />
+
+        <ImageButton
+            android:id="@+id/cancelButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/shutter_exit" />
+
+        <ImageButton
+            android:id="@+id/acceptButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/shutter_check" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@id/pictureContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/camera_top"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iLogoOverlay"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/cts_logo" />
+
+        <TextView
+            android:id="@+id/setTheDate"
+            style="@style/MediumRedText"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:gravity="center_horizontal"
+            android:text="@string/pictureConfirmNote" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pictureContainer"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/notesAddress"
+            style="@style/MediumWhiteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/notesTV"
+            style="@style/MediumRedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/notes" />
+
+        <EditText
+            android:id="@+id/notesET"
+            style="@style/red_edit_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:maxLines="3"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:singleLine="false" />
+
+        <CheckBox
+            android:id="@+id/signatureCheckBox"
+            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:checked="false"
+            android:gravity="bottom|center_horizontal"
+            android:layoutDirection="rtl"
+            android:paddingTop="20dp"
+            android:text="Signature (optional)"
+            android:textColor="#FF0000"
+            android:textSize="20sp" />
+
+        <com.github.gcacace.signaturepad.views.SignaturePad
+            android:id="@+id/signaturePad"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@color/white"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" />
+    </LinearLayout>
+
+</RelativeLayout>
